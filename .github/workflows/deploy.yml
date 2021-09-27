@@ -9,14 +9,18 @@ jobs:
       # Downloads a copy of the code in your repository before running CI tests
         - name: Check out repository code 🛎️
           uses: actions/checkout@master
-        - name: Init node 🟢 
-          uses: actions/setup-node@master
-          with:
-            node-version: 14.17.0
+        # - name: Init node 🟢 
+        #   uses: actions/setup-node@master
+        #   with:
+        #     node-version: 14.17.0
         - name: Install dependencies 🛠️
-          run: npm ci
+          uses: borales/actions-yarn@v2.3.0
+          with:
+            cmd: install # will run `yarn install` command
         - name: Build JS 🏗️
-          run: npm run build
+          uses: borales/actions-yarn@v2.3.0
+          with:
+            cmd: build # will run `yarn build` command
         - name: Deploy 🚀
           uses: JamesIves/github-pages-deploy-action@4.1.1
           with:
