@@ -13,8 +13,6 @@ jobs:
           uses: actions/setup-node@master
           with:
             node-version: 14.17.0
-        - name: Copy .env 📋
-          run: cp .env.example .env
         - name: Install dependencies 🛠️
           run: npm ci
         - name: Build JS 🏗️
