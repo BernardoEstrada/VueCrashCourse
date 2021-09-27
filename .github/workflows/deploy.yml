@@ -14,11 +14,11 @@ jobs:
         #   with:
         #     node-version: 14.17.0
         - name: Install dependencies 🛠️
-          uses: borales/actions-yarn@v2.3.0
+          uses: borales/actions-yarn@master
           with:
             cmd: install # will run `yarn install` command
         - name: Build JS 🏗️
-          uses: borales/actions-yarn@v2.3.0
+          uses: borales/actions-yarn@master
           with:
             cmd: build # will run `yarn build` command
         - name: Deploy 🚀
