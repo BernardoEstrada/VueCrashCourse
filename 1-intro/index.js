@@ -1,4 +1,4 @@
-import * as Vue from 'vue/dist/vue.esm-bundler.js';
+import * as Vue from 'vue';
 import Nums from './nums.js';
 import Inp from './inp.js';
 

@@ -16,7 +16,7 @@ export default () =>{
           router: resolve(__dirname, '6-router/index.html'),
           routerOptions: resolve(__dirname, '6-router-options/index.html'),
         },
-        external: true,
+        external: false,
       }
     },
     plugins: [
